@@ -13,20 +13,19 @@ public class MainDrive {
 		u1.name = "김민수";
 		u1.birthYear = 1995;
 		u1.point = 10000;
-		
-		//사용자 정보 출력
+
+		// 사용자 정보 출력
 		u1.printUserInfo();
-		
-		//두 번째 사용자, 이름 : 이수민, 출생년도 : 2010, 보유 포인트 : 2000P
-		
+
+		// 두 번째 사용자, 이름 : 이수민, 출생년도 : 2010, 보유 포인트 : 2000P
+
 		User u2 = new User();
-		
-		u2.name= "이수민";
+
+		u2.name = "이수민";
 		u2.birthYear = 2010;
 		u2.point = 2000;
-		
+
 		u2.printUserInfo();
-				
 
 	}
 
