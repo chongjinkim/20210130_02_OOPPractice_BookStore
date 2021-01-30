@@ -50,6 +50,13 @@ public class MainDrive {
 		
 		boolean u2B2Result = u2.rentBook(b2);
 		System.out.println(u2B2Result);
+		
+		//김민수는 베르세르크 대여 가능?
+		u1.rentBook(b2);
+		
+		u1.rentBook(b1);
+		
+		u1.printUserInfo();
 
 	}
 
