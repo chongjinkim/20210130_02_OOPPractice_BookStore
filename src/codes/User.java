@@ -59,6 +59,29 @@ public class User {
 			System.out.println("포인트가 부족합니다.");
 			return false;
 		}
+		
+		//돈이 충분한 지 확인이 된 상태로 추가 검사.
+		//나이가 대여 가능한 나이인지?(2021년 기준)
+		//이런 패턴의 코딩이 굉장히 많음
+		
+		if(getKoreanAge(2021) < book.limitAge) {
+			//나이가 안되서 대여 실패.
+			System.out.println("나이가 어려서 빌릴 수가 없다.");
+			return false;
+		}
+		
+		//이 책을 빌려간 사람이 있다면 => 실패 처리
+		
+		if (book.rentUser != null) {
+			//대여자가 이미 있다.
+			System.out.println("이미 빌려간 책입니다");
+			//대여자의 이름 출력
+			System.out.println(book.rentUser.name + "이(가) 이미 빌려갔습니다.");
+			
+			//최종 결과 실패 처리
+			return false;
+		}
+	
 
 		// 이 코드는 언제 실행? = > 돈이 충분히 있어야 실행이 된다. 모자라면 위에서 return 처리가 된다. (메쏘드가 강제 종료)
 		// 위에 if문이 들어가지 않아야만 => 밑의 코드가 실행이 된다.
