@@ -88,6 +88,15 @@ public class User {
 		// 대여 실패 조건이 단 한 개도 없었다. 대여 성공
 
 		System.out.println("대여 성공");
+		
+		//이 책을 빌려간 사람이 나다 ! 라고 세팅.!
+		
+		book.rentUser = this;//this키워드는 차후 설명
+		
+		//포인트를 (책의) 대여료 만큼 줄여주자.
+		
+		point -= book.rentFee;
+		
 		return true;
 
 	}
